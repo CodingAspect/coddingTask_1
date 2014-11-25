@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+	<title>Workflow Task</title>
+	<meta charset="utf-8" />
+
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/1.4.1/jquery.jsPlumb-1.4.1-all-min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+
+	<script src="js/workflowCtrl.js"></script>
+	<script src="js/squareDir.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div id="{{workflow}}" class="container" ng-controller="workflowCtrl">
+		<square ng-repeat="square in squares"
+		         data-ng-bind="square.name" data-key="square.key" data-position="square.position" data-transitions="square.transitions">
+		</square>
+	</div>
+</body>
+</html>
